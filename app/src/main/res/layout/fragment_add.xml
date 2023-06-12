@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/urgency_text"
+            android:text="@string/urgency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/add_title"
+            app:layout_constraintEnd_toStartOf="@+id/urgency_spinner"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    <Spinner
+            android:id="@+id/urgency_spinner"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/urgency_text"
+            android:layout_marginEnd="5dp"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"/>
+
+    <EditText
+            android:id="@+id/add_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="start|top"
+            android:ems="10"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:hint="@string/title"
+            android:autofillHints="@string/title"
+            android:theme="@style/PinkEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/urgency_text"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck"/>
+
+    <EditText
+            android:id="@+id/add_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:inputType="textMultiLine"
+            android:gravity="start|top"
+            android:ems="10"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:hint="@string/content"
+            android:autofillHints="@string/content"
+            android:theme="@style/PinkEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/create_button"
+            app:layout_constraintTop_toBottomOf="@+id/add_title"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck"/>
+
+    <Button
+            android:id="@+id/create_button"
+            android:text="@string/create"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:id="@+id/fragment_edit">
+
+    <TextView
+            android:id="@+id/urgency_text"
+            android:text="@string/urgency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/urgency_spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="13dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    <Spinner
+            android:id="@+id/urgency_spinner"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/urgency_text"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+            app:layout_constraintEnd_toStartOf="@+id/archive"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/archive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/PinkSwitch"
+            android:minHeight="32dp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/archived"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck"/>
+
+    <EditText
+            android:id="@+id/edit_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="start|top"
+            android:ems="10"
+            app:layout_constraintTop_toBottomOf="@+id/archive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:hint="@string/title"
+            android:autofillHints="@string/title"
+            android:theme="@style/PinkEditText"/>
+    <EditText
+            android:id="@+id/edit_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:inputType="textMultiLine"
+            android:gravity="start|top"
+            android:ems="10"
+            app:layout_constraintTop_toBottomOf="@+id/edit_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:hint="@string/content"
+            android:autofillHints="@string/content"
+            android:theme="@style/PinkEditText"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

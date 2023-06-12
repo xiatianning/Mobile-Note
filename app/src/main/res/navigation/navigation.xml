@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation"
+            app:startDestination="@id/mainFragment">
+
+    <fragment android:id="@+id/mainFragment"
+              android:name="ui.assignments.a4notes.MainFragment"
+              android:label="MainFragment"
+              tools:layout="@layout/fragment_main">
+        <action
+                android:id="@+id/action_mainFragment_to_editFragment"
+                app:destination="@id/editFragment"/>
+        <action android:id="@+id/action_mainFragment_to_addFragment"
+                app:destination="@id/addFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/editFragment"
+              android:name="ui.assignments.a4notes.EditFragment"
+              android:label="EditFragment"
+              tools:layout="@layout/fragment_edit">
+    </fragment>
+
+    <fragment android:id="@+id/addFragment"
+              android:name="ui.assignments.a4notes.AddFragment"
+              android:label="AddFragment">
+    <action
+            android:id="@+id/add_pop"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/addFragment"/>
+    </fragment>
+</navigation>
